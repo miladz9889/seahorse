@@ -161,9 +161,9 @@ p {
    /* ====== Video styling ====== */
    .hero-video {
   width: 100%;
-  max-width: 600px;
-  border: 2px solid #fff;
-  border-radius: 0.5rem;
+  max-width: 300px;
+  border: none;
+  border-radius: 10rem;
   margin-bottom: 1.5rem;
 }
 
