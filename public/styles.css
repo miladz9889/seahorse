@@ -37,19 +37,18 @@ a {
 
 /* ====== Navbar ====== */
 nav.navbar {
-    /* Make the navbar “stick” at the top */
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.2);
-  /* When scrolling, a backdrop can help readability: */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+    position: sticky; /* Keep it at the top while scrolling */
+    top: 0;
+    z-index: 999; /* Lower than the Jupiter modal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
+
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -230,7 +229,13 @@ p {
 
 /* ====== Jupiter Widget ====== */
 .jupiter-modal {
-    z-index: 9999 !important; /* Ensure it's above the navbar and other elements */
+    position: fixed; /* Ensure it overlays the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999 !important; /* Higher than the navbar */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional background overlay */
   }
 
 
