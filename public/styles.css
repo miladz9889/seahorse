@@ -198,29 +198,29 @@ p {
 
 /* ====== Dev Section (Paragraph + Image) ====== */
 .dev-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  display: flex !important; 
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 2rem !important;
 }
 
 .dev-section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem !important;
+    margin-bottom: 1.5rem !important;
 }
 .dev-text {
-  flex: 1;
-  text-align: left;
+  flex: 1 !important;
+  text-align: left !important;
 }
 .dev-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 .dev-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0.5rem !important;
 }
 @media (max-width: 768px) {
   .dev-section {
