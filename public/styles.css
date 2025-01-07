@@ -1,13 +1,13 @@
 
 /* ====== Global / Trippy BG ====== */
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif;
   min-height: 100vh;
   color: #fff;
   background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc, #ff9900);
@@ -15,10 +15,10 @@ body {
   animation: trippyBackground 15s ease infinite;
   overflow-x: hidden;
   display: flex;
-  flex-direction: column; /* Let nav, main, footer stack */
+  flex-direction: column;  */
 }
 
-@keyframes trippyBackground {
+/* @keyframes trippyBackground {
   0% {
     background-position: 0% 50%;
   }
@@ -33,7 +33,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
+} */
 
 /* ====== Navbar ====== */
 nav.navbar {
@@ -91,7 +91,7 @@ nav.navbar {
 }
 
 /* ====== Main (Hero) ====== */
-main {
+/* main {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ p {
   font-size: clamp(1rem, 3.5vw, 1.25rem);
   margin-bottom: 2rem;
   overflow-wrap: break-word;
-}
+} */
 
 /* ====== Buy Button (Glassmorphic) ====== */
 .buy-button {
@@ -213,6 +213,11 @@ p {
     text-align: center; /* if you prefer center text on mobile */
   }
 }
+
+/* ====== Jupiter Widget ====== */
+
+
+
 
 /* ====== Footer ====== */
 footer.footer {
