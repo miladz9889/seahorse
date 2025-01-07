@@ -2,28 +2,26 @@
 
   <head>
     <title>Astro + Jupiter CSP Example</title>
+    <script is:inline src='https://terminal.jup.ag/main-v3.js'></script>
   </head>
   <body>
     <h1>Jupiter Integrated Terminal</h1>
-    <div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
+    <div id="integrated-terminal" style="width: 400px; height: 568px;">
 
-    <!-- Load Jupiter script -->
-    <script is:inline src="https://terminal.jup.ag/main-v3.js"></script>
+<script is:inline>window.Jupiter.init({
+  displayMode: "integrated",
+  integratedTargetId: "integrated-terminal",
+  endpoint: "https://api.mainnet-beta.solana.com",
+  strictTokenList: false,
+  defaultExplorer: "Solscan",
+  formProps: {
+    fixedOutputMint: true,
+    swapMode: "ExactIn",
+    initialAmount: "100000",
+  },
+});</script>
 
-    <!-- Initialize Jupiter -->
-    <script is:inline>
-      window.Jupiter.init({
-        displayMode: "integrated",
-        integratedTargetId: "integrated-terminal",
-        endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
-        strictTokenList: false,
-        defaultExplorer: "Solscan",
-        formProps: {
-          fixedOutputMint: true,
-          swapMode: "ExactIn",
-          initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
-        },
-      });
-    </script>
+    </div>
+
   </body>
 </html>
