@@ -173,9 +173,14 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.section{
+    padding: 10rem;
+}
+
 /* ====== lore Section ====== */
 .lore-section {
-  margin-top: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 .lore-section h2 {
   font-size: 1.75rem;
