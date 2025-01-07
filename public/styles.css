@@ -218,10 +218,10 @@ p {
   }
   .dev-text,
   .dev-image {
-    width: 100%;
+    width: 80%;
   }
   .dev-text {
-    text-align: center; /* if you prefer center text on mobile */
+    text-align: center;
   }
 }
 
