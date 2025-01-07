@@ -229,7 +229,9 @@ p {
 }
 
 /* ====== Jupiter Widget ====== */
-
+.jupiter-modal {
+    z-index: 9999 !important; /* Ensure it's above the navbar and other elements */
+  }
 
 
 
