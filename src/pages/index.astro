@@ -9,7 +9,7 @@
       http-equiv="Content-Security-Policy"
       content="script-src 'self' https://terminal.jup.ag 'unsafe-eval'; object-src 'none';"
     />
-    <title>Jupiter Terminal Example --- work</title>
+    <title>Jupiter Terminal Example --gead- work</title>
     <script src="https://terminal.jup.ag/main-v3.js" defer></script>
   </head>
   <body>
@@ -19,13 +19,13 @@
       window.Jupiter.init({
         displayMode: "integrated",
         integratedTargetId: "jupiter-terminal",
-        endpoint: "https://api.mainnet-beta.solana.com",
+        endpoint: "src/components/jupiter-terminal.astro",
         strictTokenList: false,
         defaultExplorer: "Solscan",
         formProps: {
           fixedOutputMint: true,
           swapMode: "ExactIn",
-          initialOutputMint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263", // Replace with your token mint address
+          initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump", // Replace with your token mint address
         },
       });
     </script>
