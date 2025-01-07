@@ -115,12 +115,12 @@ p {
 
 /* ====== Buy Button (Glassmorphic) ====== */
 .buy-button {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 2rem;
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  border-radius: 9999px;  /* fully rounded corners */
+  border-radius: 9999px; 
   background: rgba(0, 0, 0, 0.1);
   color: #fff;
   border: 2px solid rgba(15, 9, 9, 0.2);
@@ -130,10 +130,16 @@ p {
   font-weight: 600;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-.buy-button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.02);
-}
+
+  .buy-button:hover {
+    transform: scale(1.05);
+    background-color: #cc00aa;
+  }
+  
+  .buy-button svg {
+    margin-right: 8px; /* Add spacing between the logo and the text */
+    fill: white; /* Set the logo color to match the button text */
+  }
 
 /* ====== Social Icons ====== */
 .icons {
