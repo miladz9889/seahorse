@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
             fixedOutputMint: true,
             swapMode: "ExactIn",
             initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump", // Seahorse token mint
-          },
+          },   containerStyles: { zIndex: 1000 },
         });
+        
       });
+      
     }
   });

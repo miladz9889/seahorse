@@ -40,7 +40,7 @@ nav.navbar {
     /* Make the navbar “stick” at the top */
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,6 +106,7 @@ main {
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
+  z-index: -2;
 }
 p {
   font-size: clamp(1rem, 3.5vw, 1.25rem);
@@ -167,6 +168,8 @@ p {
    /* ====== Video styling ====== */
    .hero-video {
   width: 100%;
+  position: relative;
+  z-index: -2;
   max-width: 300px;
   border: none;
   border-radius: 10rem;
