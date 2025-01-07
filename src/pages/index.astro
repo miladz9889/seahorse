@@ -56,27 +56,29 @@ import JupiterTerminal from '../components/jupiter-terminal.astro'
         <p>CA: 7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump</p>
 
         <h1>Buy Seahorses</h1>
+<center>
 
-        <div id="integrated-terminal" style="width: 400px; height: 568px;">
-          <script is:inline>
-      window.Jupiter.init({
-                  displayMode: "integrated",
-                  integratedTargetId: "integrated-terminal",
-                  endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
-                  strictTokenList: false,
-                  defaultExplorer: "Solscan",
-                  formProps: {
-                    fixedOutputMint: true,
-                    swapMode: "ExactIn",
-                    initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
-                  },
-            
+  <div id="integrated-terminal" style="width: 400px; height: 568px;">
+    <script is:inline>
+window.Jupiter.init({
+            displayMode: "integrated",
+            integratedTargetId: "integrated-terminal",
+            endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
+            strictTokenList: false,
+            defaultExplorer: "Solscan",
+            formProps: {
+              fixedOutputMint: true,
+              swapMode: "ExactIn",
+              initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
+            },
       
-                });
-                
-          </script>
-      </div>
-     
+
+          });
+          
+    </script>
+</div>
+
+</center>
           
   
 
