@@ -1,28 +1,32 @@
 ---
 ---
-
-// Jupiter Terminal Integration
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Jupiter Terminal Example --gead- work</title>
+    <title>Jupiter Terminal Example</title>
     <script src="https://terminal.jup.ag/main-v3.js" defer></script>
   </head>
   <body>
     <h1>Buy a Project Token</h1>
     <div id="jupiter-terminal" style="width: 400px; height: 568px;"></div>
-    <script defer>
-      window.Jupiter.init({
-        displayMode: "integrated",
-        integratedTargetId: "jupiter-terminal",
-        endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
-        strictTokenList: false,
-        defaultExplorer: "Solscan",
-        formProps: {
-          fixedOutputMint: true,
-          swapMode: "ExactIn",
-          initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump", // Replace with your token mint address
-        },
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.Jupiter) {
+          window.Jupiter.init({
+            displayMode: "integrated",
+            integratedTargetId: "jupiter-terminal",
+            endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
+            strictTokenList: false,
+            defaultExplorer: "Solscan",
+            formProps: {
+              fixedOutputMint: true,
+              swapMode: "ExactIn",
+              initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
+            },
+          });
+        } else {
+          console.error("Jupiter script failed to load.");
+        }
       });
     </script>
   </body>
