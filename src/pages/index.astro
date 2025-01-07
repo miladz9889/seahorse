@@ -1,206 +1,34 @@
----
-import { siDiscord } from 'simple-icons'
-import { siTelegram } from 'simple-icons'
-import { siX } from 'simple-icons'
-import { siKick } from 'simple-icons'
-import JupiterTerminal from '../components/jupiter-terminal.astro'
-
----
-
-
 <!DOCTYPE html>
-<html lang="en">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css"/>
-    <script is:inline src='https://terminal.jup.ag/main-v3.js'></script>
-    <title>Seahorse Coin</title>
+    <!-- <meta
+    http-equiv="Content-Security-Policy"
+    content="script-src 'self' https://terminal.jup.ag; object-src 'none';"
+  /> -->
+  <meta http-equiv="Content-Security-Policy" content="" />
+    <title>Astro + Jupiter CSP Example</title>
   </head>
-
   <body>
-    
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="logo">$seahorse</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#lore">The Lore</a></li>
-        <li><a href="#dev">About Dev</a></li>
-      </ul>
-      <a
-        href="https://dexscreener.com/solana/2jgwgwb3sascibckwqbsvutwpk45vm1jjs9wnhnsgxh3"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="nav-button"
-      >
-        Buy Now
-      </a>
-    </nav>
+    <h1>Jupiter Integrated Terminal</h1>
+    <div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
 
-    <main>
-      
-      <div class="container">
-        <h1>$seahorse</h1>
-        <video 
-          class="hero-video" 
-          src="/videos/seahorse_visualization.mp4"
-          autoplay 
-          muted 
-          loop 
-          playsinline
-        >
-          <!-- Fallback text if the browser doesn't support <video> -->
-          Your browser does not support the video tag.
-        </video>
-        <p>CA: 7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump</p>
+    <!-- Load Jupiter script -->
+    <script is:inline src="https://terminal.jup.ag/main-v3.js"></script>
 
-        <h1>Buy Seahorses</h1>
-<center>
-
-  <div id="integrated-terminal" style="width: 400px; height: 568px;">
+    <!-- Initialize Jupiter -->
     <script is:inline>
-window.Jupiter.init({
-            displayMode: "integrated",
-            integratedTargetId: "integrated-terminal",
-            endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
-            strictTokenList: false,
-            defaultExplorer: "Solscan",
-            formProps: {
-              fixedOutputMint: true,
-              swapMode: "ExactIn",
-              initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
-            },
-      
-
-          });
-          
+      window.Jupiter.init({
+        displayMode: "integrated",
+        integratedTargetId: "integrated-terminal",
+        endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe",
+        strictTokenList: false,
+        defaultExplorer: "Solscan",
+        formProps: {
+          fixedOutputMint: true,
+          swapMode: "ExactIn",
+          initialOutputMint: "7L6M32mpkewGWj8bHspoX8QDe9pb3b3S1U33KpFvpump",
+        },
+      });
     </script>
-</div>
-
-</center>
-          
-  
-
-     
-    
- 
-
-
-    
-
-
-        <!-- Buy Button -->
-        <a
-          href="https://dexscreener.com/solana/2jgwgwb3sascibckwqbsvutwpk45vm1jjs9wnhnsgxh3"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="buy-button"
-        >
-          Buy $seahorse
-        </a>
-
-        <!-- Social Icons -->
-        <div class="icons">
-          <!-- Discord -->
-          <a
-            href="https://discord.gg/wnT6eE24Uq"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill={"#" + siDiscord.hex}
-              aria-label="Discord"
-            >
-              <path d={siDiscord.path} />
-            </svg>
-          </a>
-          <!-- X (Twitter) -->
-          <a
-            href="https://x.com/Seahorse_Coin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill={"#" + siX.hex}
-              aria-label="X (Twitter)"
-            >
-              <path d={siX.path} />
-            </svg>
-          </a>
-          <!-- Telegram -->
-          <a
-            href="https://t.me/seahorseshaman"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill={"#" + siTelegram.hex}
-              aria-label="Telegram"
-            >
-              <path d={siTelegram.path} />
-            </svg>
-          </a>
-          <!-- Kick -->
-          <a
-            href="https://kick.com/andrewshaman"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill={"#" + siKick.hex}
-              aria-label="Kick"
-            >
-              <path d={siKick.path} />
-            </svg>
-          </a>
-        </div>
-
-        <!-- LORE SECTION -->
-        <section id="lore" class="lore-section">
-          <h2>The Lore</h2>
-          <div class="lore">
-            <p>
-              Deep within the currents of the Solana ocean lies the mystical
-              Seahorse realm, where magic meets blockchain. ...
-            </p>
-          </div>
-
-          <!-- DEV SECTION -->
-          <section id="dev" class="dev-section">
-            <div class="dev-text">
-              <h2>Meet the Dev</h2>
-              <p>
-                Andrew Shaman is a veteran streamer, comedian, and $Seahorse
-                developer. For over a decade, he’s built genuine connections
-                while living on a couch at a friend’s house. Andrew merges his
-                passion for streaming with blockchain innovation, never
-                forgetting the supporters who shaped his journey. He proves that
-                real community transcends the screen.
-              </p>
-            </div>
-            <div class="dev-image">
-              <!-- andrews photo -->
-              <img src="images/dev.png" alt="The Dev" />
-            </div>
-          </section>
-        </section>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer id="footer" class="footer">
-      <p>© 2025 Seahorse Coin. All rights reserved.</p>
-
-    </footer>
   </body>
 </html>
-
