@@ -1,1 +1,0 @@
-Content-Security-Policy: script-src 'self' 'unsafe-eval' https://terminal.jup.ag; object-src 'none';
