@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Initialize and open the Jupiter Terminal in modal mode
         window.Jupiter.init({
           displayMode: "modal", // Open terminal in modal
-          endpoint: "https://api.mainnet-beta.solana.com", // Solana RPC endpoint
+          endpoint: "https://twilight-dry-sheet.solana-mainnet.quiknode.pro/cd0792aececdd0f267891f8f7c5466d2d12d31fe", // Solana RPC endpoint
           strictTokenList: false,
           defaultExplorer: "Solscan",
           formProps: {
