@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  base: '/', // No base path needed for custom domains
+  output: 'static', // Ensures a static site is generated
+  base: '/',        // No subdirectory since you're using a custom domain
 });
