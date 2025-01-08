@@ -169,6 +169,15 @@ p {
   }
 }
 
+.started-video {
+  width: 100%;
+  position: relative;
+  max-width: 500px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
    /* ====== Video styling ====== */
    .hero-video {
   width: 100%;

@@ -1,0 +1,114 @@
+---
+
+const memes = [
+  {
+    src: 'https://media.giphy.com/media/5dSVO3Ra3Nzfr0IVlW/giphy.gif', // Verified GIF URL
+    alt: 'Seahorse gracefully swimming',
+    caption: 'Swim with the grace of a crypto seahorse!'
+  },
+  {
+    src: 'https://media.giphy.com/media/xQwafuHA3tLf800MLf/giphy.gif',
+    alt: 'Seahorse holding on for dear life',
+    caption: 'Hodl like a seahorse gripping seaweed!'
+  },
+  {
+    src: 'https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif',
+    alt: 'Ride the crypto wave',
+    caption: 'Ride the crypto wave like a true Lagoon Gang member!'
+  }
+];
+
+---
+
+<section id="lore" class="seahorse-lore">
+  <h1 class="title">🐴💦 Welcome to the Seahorse Lagoon 💦🐴</h1>
+  <p class="intro">
+    Where meme dreams are made and hodlers become legends. Dive into the lore of the <strong>Seahorse Meme Coin</strong>, the only token inspired by majestic marine creatures and led by our fearless wizard of solana, <strong>Andrew Shaman</strong>.
+  </p>
+
+  {memes.map((meme) => (
+    <div class="meme">
+      <img src={meme.src} alt={meme.alt} />
+      <p>{meme.caption}</p>
+    </div>
+  ))}
+
+  <h2>🌊 The Birth of Seahorse Coin</h2>
+  <p>
+    Legend says Andrew Shaman looked at a seahorse and thought, <em>"Why not turn this into a token?"</em> Thus, the Seahorse Meme Coin emerged, powered by Solana and fueled by a dream: bringing meme enthusiasts and crypto lovers together.
+  </p>
+
+  <h2>✨ Why Seahorses?</h2>
+  <p>
+    Seahorses are quirky, resilient, and downright fabulous. They swim sideways, grab onto seaweed when the tide gets rough, and mate for life. Like them, this coin is weird, wonderful, and built for those who dare to be different.
+  </p>
+
+  <h2>🚀 The Golden Seahorse Moment</h2>
+  <p>
+    In December 2024, Seahorse Meme Coin made waves, reaching an all-time high of <strong>$0.0191</strong>. The Lagoon Gang celebrated as their beloved token swam into the big leagues. While tides change, true seahorses keep swimming.
+  </p>
+
+  <h2>🐴💧 Join the Lagoon Gang</h2>
+  <p>
+    Don your fins and join the meme-powered revolution. With Andrew Shaman at the helm, the Seahorse Meme Coin isn’t just a token—it’s a movement. Are you ready to ride the tide?
+  </p>
+  <div>
+    <h2>🐴💧 The Birth of Seahorse Coin 🐴💧</h2>
+    <video 
+  class="started-video" 
+  src="/videos/how-it-started.mp4"
+  controls 
+  playsinline
+>
+  Your browser does not support the video tag.
+</video>
+  </div>
+</section>
+
+<style>
+  .seahorse-lore {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a2d9ff, #ffffff);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #005f99;
+    margin-bottom: 1rem;
+  }
+  .intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .meme {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .meme img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .meme p {
+    font-size: 1rem;
+    color: #007acc;
+    margin-top: 0.5rem;
+  }
+  h2 {
+    color: #003f6b;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+</style>
