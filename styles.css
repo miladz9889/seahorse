@@ -257,9 +257,7 @@ p {
     overflow-y: auto; /* Ensure modal content is scrollable */
   }
 
-  .jupiter-terminal .specific-class{
-
-  }
+ 
 
   body.jupiter-active {
     overflow: hidden;
