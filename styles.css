@@ -167,6 +167,16 @@ p {
     width: 28px;
     height: 28px;
   }
+
+  .copy-button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .copy-message {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
 }
 
 .started-video {
@@ -271,4 +281,53 @@ footer.footer {
 }
 footer.footer p {
   font-size: 0.9rem;
+}
+
+
+.copy-button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 20px auto;
+  word-break: break-word;
+}
+
+.copy-button:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
+}
+
+.copy-button .ca-label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+/* Confirmation Message Styling */
+.copy-message {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
 }
