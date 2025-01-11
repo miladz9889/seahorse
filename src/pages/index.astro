@@ -15,6 +15,9 @@ SeahorseLore
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script defer src="/live-stream.js"></script>
+    
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QD8YWEY4V"></script>
@@ -85,6 +88,11 @@ SeahorseLore
         <li><a href="#">Home</a></li>
         <li><a href="#lore">The Lore</a></li>
         <li><a href="#dev">About Dev</a></li>
+        <li id="live-link-container">
+          <a href="#live-stream" id="live-link">
+            LIVE <span id="live-status-dot"></span>
+          </a>
+        </li>
       </ul>
       <a
         href="https://dexscreener.com/solana/2jgwgwb3sascibckwqbsvutwpk45vm1jjs9wnhnsgxh3"
@@ -95,6 +103,25 @@ SeahorseLore
         Dex
       </a>
     </nav>
+<!-- 
+    <button id="test-live-status-button" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+">
+  Simulate Live Status
+</button> -->
 
     <main>
       
@@ -249,6 +276,29 @@ SeahorseLore
           </section>
         
       </div>
+
+      <!-- src="https://player.twitch.tv/?channel=andrewshaman&parent=seahorse.meme" -->
+
+         <!-- Twitch Stream Embed -->
+         <!-- <section id="live-stream" class="live-stream-section">
+          <h2>Live Stream</h2>
+          <div id="twitch-embed">
+            <iframe
+              src="https://player.twitch.tv/?channel=andrewshaman&parent=localhost"
+              height="450"
+              width="800"
+              allowfullscreen="true"
+              frameborder="0">
+            </iframe>
+          </div>
+        </section> -->
+
+        <section id="live-stream" class="live-stream-section">
+          <h2 style="color: blueviolet;">Twitch Live Stream</h2>
+          <div id="twitch-embed"></div>
+        </section>
+
+        
     </main>
 
     <!-- FOOTER -->

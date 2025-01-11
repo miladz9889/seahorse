@@ -84,18 +84,67 @@ nav.navbar {
   background-color: #f0f0f0;
 }
 
+
+
+/* Live Status Dot */
+#live-status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray; /* Default to offline (gray) */
+  margin-left: 8px;
+}
+
+/* Blinking Animation */
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    background-color: red;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Twitch Embed Section */
+.live-stream-section {
+  padding: 2rem;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+#twitch-embed {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 450px;
+}
+
 /* Mobile-friendly nav (stack links) */
 /* Hide nav links on screens smaller than 600px */
 @media (max-width: 600px) {
   .navbar .nav-links {
-    display: none;
+    display: flex; /* Ensure links are flex items */
+    justify-content: center;
+  }
+
+  .navbar .nav-links li {
+    display: none; /* Hide all links */
+  }
+
+  .navbar .nav-links li#live-link-container {
+    display: inline-block; /* Only show the LIVE link */
   }
 }
 
 /* ====== Main (Hero) ====== */
 main {
   flex: 1;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   z-index: auto;
